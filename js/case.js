@@ -1,7 +1,12 @@
 document.getElementById('btn-case-plus').addEventListener('click',function(){
-     // const clickCasePlusButton = getElementByInputField('btn-case-plus');
+     //  const clickCasePlusButton = getElementByInputField('btn-case-plus');
      // console.log(clickCasePlusButton);
-      getElementByInputField(true);
+     const newPlusCaseAddNumber =  getElementByInputField(true);
+     updateCaseTotalNumber(newPlusCaseAddNumber);
+     // const totalCasePrice = newPlusCaseAddNumber * 59;
+     // const caseTotalElement = document.getElementById('case-total');
+     // caseTotalElement.innerText = totalCasePrice;
+
 })
 // document.getElementById('btn-case-plus').addEventListener('click',function(){
 //      // const caseFieldNumber = caseFieldGetById('case-number-field');

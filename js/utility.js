@@ -3,16 +3,21 @@ function getElementByInputField(isIncrease){
   const inputFieldValue = inputField.value;
   const inputFieldValueSToIni = parseInt(inputFieldValue);
   // const previousValue = inputFieldValueSToIni + 1;
-  // = inputFieldValueSToIni + 1;
-   let previousValue; 
-   if (isIncrease){
-    previousValue = inputFieldValueSToIni + 1;
-   }
-   else{
-    previousValue = inputFieldValueSToIni - 1;
-   }           
-  inputField.value = previousValue;
-  return previousValue;
+  // inputField.value = previousValue;
+  let newPlusCaseAddNumber;
+  if(isIncrease === true){
+    newPlusCaseAddNumber = inputFieldValueSToIni + 1;
+  }
+  else{
+    newPlusCaseAddNumber = inputFieldValueSToIni - 1;
+  }
+  inputField.value = newPlusCaseAddNumber;
+  return newPlusCaseAddNumber;
+}
+function updateCaseTotalNumber(newPlusCaseAddNumber){
+     const totalCasePrice = newPlusCaseAddNumber * 59;
+     const caseTotalElement = document.getElementById('case-total');
+     caseTotalElement.innerText = totalCasePrice;
 }
 // function caseFieldGetById(isIncrease){
 //     const caseField = document.getElementById('case-number-field');
