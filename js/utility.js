@@ -19,6 +19,30 @@ function updateCaseTotalNumber(newPlusCaseAddNumber){
      const caseTotalElement = document.getElementById('case-total');
      caseTotalElement.innerText = totalCasePrice;
 }
+
+//  use function for the phone button 
+function updatePhoneFieldById(isIncrease){
+  const phoneField = document.getElementById('phone-Field');
+  const phoneFieldValue = phoneField.value;
+  const phoneFieldStInit = parseInt(phoneFieldValue);
+  let phonePreviouValue;
+  // phoneField.value = phonePreviouValue;
+  if (isIncrease === true){
+    phonePreviouValue = phoneFieldStInit + 1;
+  }
+  else{
+    phonePreviouValue = phoneFieldStInit - 1;
+  }
+  phoneField.value = phonePreviouValue;
+  return phonePreviouValue;
+}
+//  function update phone price
+function updatePhonePrice(phonePreviouValue){
+  const phoneTotalPrice = phonePreviouValue * 1219;
+  const phonePriceId = document.getElementById('phone-total');
+  phonePriceId.innerText = phoneTotalPrice;
+
+}
 // function caseFieldGetById(isIncrease){
 //     const caseField = document.getElementById('case-number-field');
 //     const caseFieldValue = caseField.value;
